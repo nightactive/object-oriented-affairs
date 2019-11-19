@@ -45,7 +45,7 @@ public class Main {
         System.out.println("Minute: " + t1.getMinute());
         System.out.println("Second: " + t1.getSecond());
 
-        t1.setTime(58,59,23);
+        t1.setTime(63,59,23);
         System.out.println(t1);
 
         System.out.println(t1.nextSecond());

@@ -34,15 +34,18 @@ public class Time {
     }
 
     public void setHour(int hour) {
-        this.hour = hour;
+        if (hour >= 24) System.out.println("Hours error");
+        else this.hour = hour;
     }
 
     public void setMinute(int minute) {
-        this.minute = minute;
+        if (minute >= 60) System.out.println("Minutes error");
+        else this.minute = minute;
     }
 
     public void setSecond(int second) {
-        this.second = second;
+        if (second >= 60) System.out.println("Seconds error");
+        else this.second = second;
     }
 
     public String toString() {
@@ -51,9 +54,11 @@ public class Time {
     }
 
     public void setTime(int second, int minute, int hour) {
-        this.second = second;
-        this.minute = minute;
-        this.hour = hour;
+        if ((second < 60) && (minute < 60) && (hour < 24)) {
+            this.second = second;
+            this.minute = minute;
+            this.hour = hour;
+        } else System.out.println("Time set error");
     }
 
     public Time nextSecond() {
