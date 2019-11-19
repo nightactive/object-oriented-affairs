@@ -1,0 +1,6 @@
+public int[] getXY() {
+    int[] results = new int[2];
+    results[0] = this.x;
+    results[1] = this.y;
+    return results;
+}
