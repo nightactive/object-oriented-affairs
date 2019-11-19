@@ -29,7 +29,6 @@ public class Main {
                             + " is " + Math.round(p2.distance(p1) * 100.0) / 100.0);
         System.out.println("Distance from (10, 10) to " + p2
                             + " is " + Math.round(p2.distance(10,10) * 100.0) / 100.0);
-
         //___________________________________________________________________________________
         // test line
         Line l1 = new Line(new Point(5,3), new Point(9,-5));
@@ -39,5 +38,17 @@ public class Main {
         l1.setEndXY(92,17);
         l1.setBegin(p1);
         System.out.println(l1.getLength());
+        //___________________________________________________________________________________
+        // test circle
+        Circle c1 = new Circle();
+        System.out.println(c1);
+
+        Circle c2 = new Circle(1,2,3.3);
+        System.out.println(c2);
+
+        Circle c3 = new Circle(new Point(23, 51), 17.3);
+        System.out.println(c3);
+
+        System.out.println(c3.distance(c1));
     }
 }
