@@ -30,6 +30,8 @@ public class Main {
         System.out.println("Distance from (10, 10) to " + p2
                             + " is " + Math.round(p2.distance(10,10) * 100.0) / 100.0);
         //___________________________________________________________________________________
+        System.out.println("________________________________");
+
         // test line
         Line l1 = new Line(new Point(5,3), new Point(9,-5));
         System.out.println(l1);
@@ -39,6 +41,8 @@ public class Main {
         l1.setBegin(p1);
         System.out.println(l1.getLength());
         //___________________________________________________________________________________
+        System.out.println("________________________________");
+
         // test circle
         Circle c1 = new Circle();
         System.out.println(c1);
@@ -50,5 +54,28 @@ public class Main {
         System.out.println(c3);
 
         System.out.println(c3.distance(c1));
+        //___________________________________________________________________________________
+        System.out.println("________________________________");
+
+        // test cylinder
+        Cylinder cy1 = new Cylinder();
+        System.out.println(cy1);
+
+        Cylinder cy2 = new Cylinder(5.0, 2.0);
+        System.out.println(cy2);
+        //___________________________________________________________________________________
+        System.out.println("________________________________");
+
+        // test Point3D
+        Point3D p3d = new Point3D(5, 4, 1);
+        System.out.println(p3d);
+        System.out.println(p3d.getX());
+        System.out.println(p3d.getY());
+        System.out.println(p3d.getZ());
+        System.out.println(p3d.getXYZ()[0] + " " + p3d.getXYZ()[1] + " " + p3d.getXYZ()[2]);
+        p3d.setXYZ(9,8,7);
+        System.out.println(p3d);
+        System.out.println(p3d.distance());
+        System.out.println(p3d.distance(new Point3D(73, 15, 32)));
     }
 }

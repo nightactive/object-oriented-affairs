@@ -9,13 +9,18 @@ public class Circle {
         radius = 1.0;
     }
 
-    public Circle(int xCenter, int yCenter, double radius) {
-        center = new Point(xCenter, yCenter);
+    public Circle(double radius) {
+        center = new Point(0, 0);
         this.radius = radius;
     }
 
     public Circle(Point center, double radius) {
         this.center = center;
+        this.radius = radius;
+    }
+
+    public Circle(int xCenter, int yCenter, double radius) {
+        center = new Point(xCenter, yCenter);
         this.radius = radius;
     }
 
